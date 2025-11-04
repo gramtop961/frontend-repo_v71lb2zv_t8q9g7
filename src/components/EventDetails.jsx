@@ -1,24 +1,49 @@
-import React from 'react'
-import { Calendar, Clock, MapPin } from 'lucide-react'
+import { Calendar, Clock, MapPin } from 'lucide-react';
 
 export default function EventDetails() {
-  const items = [
-    { icon: Calendar, label: 'Date', value: 'Saturday, June 21, 2025' },
-    { icon: Clock, label: 'Time', value: 'Ceremony 3:00 PM • Reception 6:00 PM' },
-    { icon: MapPin, label: 'Venue', value: 'Rose Garden Hall, San Francisco' },
-  ]
+  const details = [
+    {
+      icon: Calendar,
+      title: 'Date',
+      text: 'Saturday, September 20, 2025',
+    },
+    {
+      icon: Clock,
+      title: 'Time',
+      text: 'Ceremony 4:00 PM • Reception 6:00 PM',
+    },
+    {
+      icon: MapPin,
+      title: 'Venue',
+      text: 'The Conservatory, San Francisco, CA',
+    },
+  ];
 
   return (
-    <section className="grid sm:grid-cols-3 gap-6">
-      {items.map(({ icon: Icon, label, value }) => (
-        <div key={label} className="rounded-2xl border border-pink-100 bg-white p-6 text-center shadow-sm">
-          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-pink-50">
-            <Icon className="h-6 w-6 text-pink-600" />
+    <section className="mt-16">
+      <div className="text-center">
+        <h2 className="font-serif text-3xl md:text-4xl text-gray-900">Event Details</h2>
+        <p className="mt-2 text-gray-600">We can’t wait to celebrate with you</p>
+      </div>
+
+      <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+        {details.map(({ icon: Icon, title, text }) => (
+          <div
+            key={title}
+            className="rounded-2xl border border-pink-100 bg-white/80 p-6 shadow-sm backdrop-blur-sm transition hover:shadow-md"
+          >
+            <div className="flex items-start gap-4">
+              <div className="rounded-full bg-pink-50 p-3 text-pink-600">
+                <Icon className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-900">{title}</h3>
+                <p className="mt-1 text-sm text-gray-600">{text}</p>
+              </div>
+            </div>
           </div>
-          <p className="text-sm uppercase tracking-wide text-pink-500">{label}</p>
-          <p className="mt-1 text-gray-800">{value}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
-  )
+  );
 }

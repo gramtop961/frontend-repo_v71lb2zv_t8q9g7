@@ -1,32 +1,41 @@
-import React from 'react'
-import InvitationHeader from './components/InvitationHeader'
-import EventDetails from './components/EventDetails'
-import LoveQuote from './components/LoveQuote'
-import RSVPSection from './components/RSVPSection'
+import HeroSection from './components/HeroSection';
+import InvitationHeader from './components/InvitationHeader';
+import EventDetails from './components/EventDetails';
+import LoveQuote from './components/LoveQuote';
+import RSVPSection from './components/RSVPSection';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-pink-600 antialiased">
-      <main className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
-        <InvitationHeader />
+    <div className="min-h-screen bg-white text-gray-900">
+      <main className="mx-auto max-w-6xl px-4 py-8 md:py-12">
+        {/* Hero with Spline 3D */}
+        <HeroSection />
 
-        <div className="my-12 sm:my-16" />
+        {/* Intro text */}
+        <section className="mt-12">
+          <InvitationHeader />
+        </section>
+
+        {/* Event details */}
         <EventDetails />
 
-        <div className="my-12 sm:my-16" />
+        {/* Love quote */}
         <LoveQuote />
 
-        <div className="my-12 sm:my-16" />
+        {/* RSVP */}
         <RSVPSection />
       </main>
 
-      <footer className="border-t border-pink-100 bg-white/60">
-        <div className="mx-auto max-w-4xl px-6 py-8 text-center text-sm text-pink-500">
-          Made with love for Jane & Jhon • 2025
+      <footer className="mx-auto max-w-6xl px-4 py-8">
+        <div className="flex items-center justify-center">
+          <div className="h-px w-24 bg-gradient-to-r from-transparent via-pink-300 to-transparent" />
         </div>
+        <p className="mt-4 text-center text-sm text-gray-500">
+          With love, Jane & Jhon
+        </p>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
