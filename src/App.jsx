@@ -26,7 +26,9 @@ function App() {
         <div className="flex items-center justify-center">
           <div className="h-px w-24 bg-gradient-to-r from-transparent via-pink-300 to-transparent" />
         </div>
-        <p className="mt-4 text-center text-sm text-gray-500">With love, Jane & Jhon</p>
+        <p className="mt-4 text-center text-sm text-gray-500">
+          With love, <span className="text-pink-600">Jane doe & Jhon doe</span>
+        </p>
       </footer>
     </div>
   );

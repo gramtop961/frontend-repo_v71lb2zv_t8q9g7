@@ -2,7 +2,7 @@ import Spline from '@splinetool/react-spline';
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[72vh] md:h-[82vh] w-full overflow-hidden rounded-3xl bg-pink-50">
+    <section className="relative h-[72vh] md:h-[82vh] w-full overflow-hidden rounded-3xl bg-white">
       {/* 3D Scene */}
       <div className="absolute inset-0">
         <Spline
@@ -12,17 +12,17 @@ export default function HeroSection() {
       </div>
 
       {/* Soft gradient and vignette overlays (non-blocking) */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/70 via-rose-50/10 to-white/80" />
-      <div className="pointer-events-none absolute inset-0 [background:radial-gradient(ellipse_at_center,transparent_45%,rgba(255,255,255,0.9)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/80 via-rose-50/10 to-white/90" />
+      <div className="pointer-events-none absolute inset-0 [background:radial-gradient(ellipse_at_center,transparent_45%,rgba(255,255,255,0.95)_100%)]" />
 
-      {/* Floral glow accents */}
+      {/* Subtle pink glow accents */}
       <div className="pointer-events-none absolute -top-16 -left-16 h-72 w-72 rounded-full bg-rose-200/40 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-20 -right-24 h-80 w-80 rounded-full bg-rose-300/40 blur-3xl" />
 
       {/* Centered content */}
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center px-6">
         <p className="tracking-[0.3em] uppercase text-xs md:text-sm text-pink-500/80">We’re getting married</p>
-        <h1 className="mt-3 text-4xl md:text-6xl font-serif text-gray-900">
+        <h1 className="mt-3 text-4xl md:text-6xl font-serif text-pink-600">
           Jane Doe <span className="text-pink-500">&</span> Jhon Doe
         </h1>
         <p className="mt-4 text-gray-700 md:text-lg">Saturday, September 20, 2025 • San Francisco, CA</p>
